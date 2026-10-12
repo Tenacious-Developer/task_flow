@@ -1,0 +1,123 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-container {
+    background: white;
+    width: 450px;
+    max-width: 95%;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-box {
+    display: flex;
+    gap: 8px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px 12px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+#addBtn {
+    background: #2563eb;
+}
+
+#addBtn:hover {
+    background: #1d4ed8;
+}
+
+ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: #f3f4f6;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+.task-text {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.status {
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.status.pending {
+    color: #d97706;
+}
+
+.status.completed {
+    color: #16a34a;
+}
+
+.toggle-btn {
+    background: #16a34a;
+    white-space: nowrap;
+}
+
+.toggle-btn.pending {
+    background: #16a34a;
+}
+
+.toggle-btn.completed {
+    background: #d97706;
+}
+
+.delete-btn {
+    background: #dc2626;
+    white-space: nowrap;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
