@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.3s ease;
+}
+
+.todo-container {
+    width: 90%;
+    max-width: 600px;
+
+    background: white;
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s ease;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* =========================
+   THEME BUTTON
+========================= */
+
+.theme-button {
+    display: block;
+
+    margin: 0 auto 20px auto;
+
+    padding: 10px 18px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #222;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+.theme-button:hover {
+    opacity: 0.8;
+}
+
+/* =========================
+   INPUT
+========================= */
+
+.input-box {
+    display: flex;
+    gap: 10px;
+}
+
+.input-box input {
+    flex: 1;
+
+    padding: 13px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    background: white;
+    color: #222;
+}
+
+.input-box button {
+    padding: 13px 22px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #4f46e5;
+    color: white;
+
+    cursor: pointer;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 25px 0;
+
+    padding: 15px;
+
+    background: #f5f5f5;
+
+    border-radius: 8px;
+}
+
+/* =========================
+   TASKS
+========================= */
+
+#taskList {
+    list-style: none;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px;
+
+    margin-bottom: 10px;
+
+    background: #f8f9fa;
+
+    border: 1px solid #eee;
+
+    border-radius: 8px;
+}
+
+.task-text {
+    flex: 1;
+}
+
+.task.completed .task-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* LIKE */
+
+.like-btn {
+    border: none;
+    background: transparent;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+.like-btn.liked {
+    color: red;
+}
+
+/* DELETE */
+
+.delete-btn {
+    border: none;
+
+    background: #ef4444;
+
+    color: white;
+
+    padding: 7px 10px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+/* EMPTY */
+
+#emptyMessage {
+    text-align: center;
+
+    color: #999;
+
+    padding: 20px;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark {
+    background: #111827;
+    color: #f9fafb;
+}
+
+body.dark .todo-container {
+    background: #1f2937;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .subtitle {
+    color: #9ca3af;
+}
+
+body.dark .theme-button {
+    background: #f9fafb;
+    color: #111827;
+}
+
+body.dark .input-box input {
+    background: #111827;
+    color: white;
+
+    border-color: #374151;
+}
+
+body.dark .input-box input::placeholder {
+    color: #9ca3af;
+}
+
+body.dark .stats {
+    background: #111827;
+    color: #d1d5db;
+}
+
+body.dark .task {
+    background: #111827;
+    border-color: #374151;
+}
+
+body.dark .task-text {
+    color: #f9fafb;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+    body {
+        padding: 20px;
+    }
+
+    .todo-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .input-box {
+        flex-direction: column;
+    }
+
+    .input-box button {
+        width: 100%;
+    }
+}
